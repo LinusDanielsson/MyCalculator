@@ -14,13 +14,16 @@
         <input type="text" id="inputField">
         <div id="calcDisplay">Calculation:<span id="numDisplay">  </span></div>
         <div id="resultDisplay">Result:<span id="calcResultDisplay">  </span></div>
-        <button id="add">+</button>
-        <button id="sub">-</button>
-        <button id="eval">=</button>
-        <button id="clear">C</button>
+        <div id="buttondiv">
+        <button id="add">+<span id="buttonLabel"> + </span></button>
+        <button id="sub">-<span id="buttonLabel"> - </span></button>
+        <button id="eval">=<span id="buttonLabel"> ENTER </span></button>
+        <button id="clear">C<span id="buttonLabel"> DELETE </span></button>
+        </div>
         </from>
+        <div id="instructions">Try to use your keyboard instead of clicking buttons!</div>
     </div>
-</body>
+    </body>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="JqueryApp.js"></script>
 </body>
