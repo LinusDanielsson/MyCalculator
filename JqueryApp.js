@@ -65,6 +65,7 @@ buttonClear.on("click", function () {
 });
 
 //Keyboard restriction function
+// https://keycode.info/
 //KeyCode: 48-57 = 0-9
 //KeyCode: 8 = Backspace
 textInputField.keypress(function (key) {
