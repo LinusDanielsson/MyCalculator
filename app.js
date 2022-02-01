@@ -18,7 +18,6 @@ function evalMe() {
     let lastChar = calcArray[calcArray.length - 1];
     if (lastChar == "+") {
         calcArray.pop();
-        document.getElementById("resultDisplay");
         let resultatet = eval(calcArray.join(""));
         document.getElementById("resultDisplay").innerHTML = resultatet;
         inputField.value = "";
