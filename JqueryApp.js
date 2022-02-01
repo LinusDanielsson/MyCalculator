@@ -49,19 +49,26 @@ buttonSub.on("click", function () {
 buttonEval.on("click", function () {
   calcDisplayer.empty(); // .empty() som Tömmer vår calculation display.
 
-  result = calcArray.reduce((a, b) => a + b, 0); // .reduce((a, b) => a + b, 0)) för att räkna ut vår array
+  if (calcArray.length <= 0 ){
+      return;
+  }
+  else {
+    result = calcArray.reduce((a, b) => a + b, 0); // .reduce((a, b) => a + b, 0)) för att räkna ut vår array
 
-  resultDisplayer.append(" " + result);
+    resultDisplayer.append(result);
 
-  calcArray = [];
+    calcArray = [];
 
-  textInputField.val(""); //Tömmer inmatingsfältet
+    textInputField.val(""); //Tömmer inmatingsfältet
+  }
 });
 
 //Clear(C) button function
-
 buttonClear.on("click", function () {
   textInputField.val("");
+  calcArray = [];
+  resultDisplayer.empty();
+  calcDisplayer.empty();
 });
 
 //Keyboard restriction function
@@ -81,7 +88,7 @@ textInputField.keypress(function (key) {
 //KeyCode: 46 = Delete
 
 textInputField.keypress(function (key) {
-  if (key.which == 13) {
+  if (key.which == 13) { //If key pressed trigger click on button
     buttonEval.click();
   }
   else if (key.which == 43) {

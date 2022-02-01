@@ -1,5 +1,5 @@
 .content {
-    max-width: 500px;
+    max-width: 800px;
     margin: auto;
     margin-top: 10%;
     background-color: orangered;
@@ -12,7 +12,32 @@ h1{
 }
 #calcDisplay{
     background-color: aqua;
+    min-height: 50px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 25px;
 }
 #resultDisplay{
     background-color: chartreuse;
+    min-height: 50px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 25px;
+}
+#numDisplay{
+    font-weight: lighter;
+}
+#calcResultDisplay {
+    font-weight: lighter;
+    font-size: 50px;
+}
+#inputField {
+    margin: 0 auto;
+    display: block;
+    font-size: 50px;
+}
+
+button{
+    padding: 5%;
+    font-size: 200px;
 }
