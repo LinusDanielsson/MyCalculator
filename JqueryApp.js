@@ -3,7 +3,6 @@ var buttonSub = $("#sub");
 var buttonEval = $("#eval");
 
 var textInputField = $("#inputField");
-
 var calcDisplayer = $("#numDisplay");
 var resultDisplayer = $("#calcResultDisplay");
 
@@ -51,3 +50,17 @@ buttonSub.on("click", function(){
     textInputField.val(""); //Tömmer inmatingsfältet
 
 });
+
+//Eval(=) button function
+buttonEval.on("click", function(){
+
+    calcDisplayer.empty() // .empty() som Tömmer vår calculation display.
+
+    result = calcArray.reduce((a, b) => a + b, 0); // .reduce((a, b) => a + b, 0)) för att räkna ut vår array
+
+    resultDisplayer.append(" " + result);
+
+    calcArray = [];
+
+})
+
