@@ -1,0 +1,18 @@
+.content {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 10%;
+    background-color: orangered;
+  }
+body {
+    background-color: purple;
+}
+h1{
+    text-align: center;
+}
+#calcDisplay{
+    background-color: aqua;
+}
+#resultDisplay{
+    background-color: chartreuse;
+}
