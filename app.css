@@ -46,7 +46,7 @@ h1{
 }
 #inputField {
     margin: 0 auto;
-    display: block;
+    display: flex;
     font-size: 50px;
 }
 

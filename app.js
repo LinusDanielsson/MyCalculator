@@ -24,7 +24,7 @@ buttonAdd.on("click", function () {
     calcDisplayer.append(" + " + textToNumber);
   }
 
-  textInputField.val(""); //Tömmer inmatingsfältet
+  textInputField.val(""); //Tömmer inmatingsfältet med att lägga en tom sträng
 });
 
 //Sub(-) button function
@@ -42,7 +42,7 @@ buttonSub.on("click", function () {
     calcDisplayer.append(" - " + textToNumber);
   }
 
-  textInputField.val(""); //Tömmer inmatingsfältet
+  textInputField.val(""); //Tömmer inmatingsfältet med att lägga en tom sträng
 });
 
 //Eval(=) button function
@@ -59,7 +59,7 @@ buttonEval.on("click", function () {
 
     calcArray = [];
 
-    textInputField.val(""); //Tömmer inmatingsfältet
+    textInputField.val(""); //Tömmer inmatingsfältet med att lägga en tom sträng
   }
 });
 
@@ -74,18 +74,17 @@ buttonClear.on("click", function () {
 //Keyboard restriction function
 // https://keycode.info/ 
 //KeyCode: 48-57 = 0-9
-//KeyCode: 8 = Backspace
-textInputField.keypress(function (key) {
-  if (key.charCode < 48 || (key.charCode > 57 && key.charCode != 8)) {
-    return false;
-  }
-});
-
-//Keyboard functions
+//KeyCode: 46 = . och Delete
+//KeyCode: 8 = backspace
 //KeyCode: 13 = Enter
 //KeyCode: 43 = +
 //KeyCode: 45 = -
-//KeyCode: 46 = Delete
+
+textInputField.keypress(function (key) {
+  if ((key.which < 48 || key.which > 57) && key.which != 46) {
+    return false;
+  }
+});
 
 textInputField.keypress(function (key) {
   if (key.which == 13) { //If key pressed trigger click on button
@@ -99,7 +98,7 @@ textInputField.keypress(function (key) {
   } 
 });
 
-//Delete funkar inte på keypress utan bara på keydown/keyup. Något med printable characters att göra??
+//Delete funkar inte på keypress utan bara på keydown/keyup. Något med printable characters att göra vad jag kunde hitta.
 textInputField.keydown(function (key) {
     if (key.which == 46) {
       buttonClear.click();
